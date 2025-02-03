@@ -24,7 +24,6 @@ public class Atividade {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
 	private String nome;
 	
 	@Column(columnDefinition = "TEXT")
@@ -32,7 +31,7 @@ public class Atividade {
 	private Double preco;
 	
 	@ManyToOne
-	@JoinColumn(name = "catergoria_id")
+	@JoinColumn(name = "categoria_id")
 	private Categoria categoria;
 	
 	@OneToMany(mappedBy = "atividade")
